@@ -40,10 +40,11 @@ body {
 }
 
 textarea {
-  color: grey;
+  color: black;
   resize: none;
   width: 100%;
   height: 500px;
+  font: 12px Courier, sans-serif;
 }
 #textarea {
   flex-grow: 4;

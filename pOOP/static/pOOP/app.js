@@ -16,10 +16,10 @@ function test() {
         array.push(object);
       }
       if (document.getElementById("language").value === "c++") {
-        object.setter = `void set`+document.getElementById(varname).value+`(`+document.getElementById(vartype).value+` x) {
+        object.setter = `void set`+document.getElementById(varname).value+`(`+document.getElementById(vartype).value+` x) const {
       `+document.getElementById(varname).value+` = x;
 }`;
-        object.getter = document.getElementById(vartype).value+` get`+document.getElementById(varname).value+`() {
+        object.getter = document.getElementById(vartype).value+` get`+document.getElementById(varname).value+`() const {
       return `+document.getElementById(varname).value+`;
 }`;
         array.push(object);
@@ -35,7 +35,7 @@ function test() {
       }
     }
     for (var i = 0; i < array.length; i++) {
-      output += "\n\n"+array[i].setter + "\n\n"  + array[i].getter;;
+      output += array[i].setter + "\n\n"  + array[i].getter+"\n\n";
     }
  
   document.getElementById('output').value = output;
@@ -61,4 +61,14 @@ function removeInput() {
   let d_nested = document.getElementById(idText)
   document.getElementById('inputs').removeChild(d_nested);
   numInputs -= 1;
+}
+
+function copy() {
+  var copyText = document.getElementById("output");
+
+  copyText.select(); 
+
+  navigator.clipboard.writeText(copyText.value);
+
+  alert("Copied the code!");
 }

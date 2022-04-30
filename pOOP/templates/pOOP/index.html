@@ -7,13 +7,10 @@
   
 
 <head>
-<link rel="stylesheet" href="{% static 'pOOP/default.min.css' %}">
-<script src="{% static 'pOOP/highlight.min.js' %}"></script>
-<script>hljs.highlightAll();</script>
   
   <ul>
   <li><a class="active" href="/Home/">Home</a></li>
-  <li><a href="/pOOP/">pOOP</a></li>
+  <li><a href="/pOOP/">Generator</a></li>
   <li><a href="/Python/">Python</a></li>
   <li><a href="/CPP/">C++</a></li>
   <li><a href="/Java/">Java</a></li>
@@ -52,15 +49,20 @@
     </table>
   </div>
   <div id="button-div"> 
-    <button type="button" onclick="test()" id="button">Submit</button><br><br>
+    <button type="button" onclick="test()" id="button">Submit</button>
+    <button onclick="copy()">Copy text</button>
+    <br><br>
   </div>
-  <pre><code class="language-html">
+<!--   <pre><code> -->
   <div id="textarea">
-    <textarea disabled id="output" name="output">
-      This is where your functions will be...
+    <textarea disabled id="output" name="output">Your functions will appear here...
     </textarea>
   </div>
-</code></pre>
+<!-- </code></pre> -->
 </body>
 
 </html>
+<br>
+  <footer>
+    Project by: Edwin Villalpando, Lemuel Sumardy, Ryan Ardalan, Thomas Yeoh, Tyler Osbey
+</footer>
