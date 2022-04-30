@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="{% static 'pOOP/style.css' %}">
+<script src="{% static 'pOOP/app.js' %}"></script>
+  
+
+<head>
+<link rel="stylesheet" href="{% static 'pOOP/default.min.css' %}">
+<script src="{% static 'pOOP/highlight.min.js' %}"></script>
+<script>hljs.highlightAll();</script>
+  
+  <ul>
+  <li><a class="active" href="/Home/">Home</a></li>
+  <li><a href="/pOOP/">pOOP</a></li>
+  <li><a href="/Python/">Python</a></li>
+  <li><a href="/CPP/">C++</a></li>
+  <li><a href="/Java/">Java</a></li>
+  </ul>
+  
+  <title>Setter & Getter</title>
+</head>
+
+
+<body>
+  <div>
+    <h1>Setter & Getter Generator</h1>
+  </div>
+  <div id="top-input">
+    <select name="language" id="language">
+      <option value="python">Python</option>
+      <option value="c++">C++</option>
+      <option value="java">Java</option>
+    </select> 
+    <div id="input-buttons">
+      <button type="button" onclick="addInput()" id="plus">+</button>
+      <button type="button" onclick="removeInput()">-</button>
+    </div>
+  </div>
+  <br><br>
+  <div>
+    <table id="inputs">
+      <tr>
+        <th>Variable Name</th>
+        <th>Variable Type</th>
+      </tr>
+      <tr id="input">
+        <th><input type="text" id="vname0" name="vname"></th>
+        <th><input type="text" id="vtype0" name="vtype"></th>
+      </tr>
+    </table>
+  </div>
+  <div id="button-div"> 
+    <button type="button" onclick="test()" id="button">Submit</button><br><br>
+  </div>
+  <pre><code class="language-html">
+  <div id="textarea">
+    <textarea disabled id="output" name="output">
+      This is where your functions will be...
+    </textarea>
+  </div>
+</code></pre>
+</body>
+
+</html>
