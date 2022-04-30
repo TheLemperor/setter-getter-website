@@ -16,7 +16,7 @@ function test() {
         array.push(object);
       }
       if (document.getElementById("language").value === "c++") {
-        object.setter = `void set`+document.getElementById(varname).value+`(`+document.getElementById(vartype).value+` x) const {
+        object.setter = `void set`+document.getElementById(varname).value+`(`+document.getElementById(vartype).value+` x) {
       `+document.getElementById(varname).value+` = x;
 }`;
         object.getter = document.getElementById(vartype).value+` get`+document.getElementById(varname).value+`() const {
